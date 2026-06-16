@@ -1,0 +1,16 @@
+Q.Write a RISC-V program that:
+
+Step_1:Loads -31 into a register
+Adds 6 to it.
+Step_2:Stores the result in memory.
+Loads the stored value back.
+Performs an XOR with -1.
+If the result is negative:
+Shift it right arithmetically by 2.
+Otherwise:
+Shift it left by 2.
+Store the shifted result in memory.
+Load the result back and repeatedly add it to a running sum 5 times using a loop.
+Divide the final sum by 5 and store:
+.Quotient
+.Remainder
