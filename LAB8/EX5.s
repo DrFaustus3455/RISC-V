@@ -1,15 +1,22 @@
-li x8, 10
+li x8, 1      # counter
+li x9, 0      # sum
+li x5, 16     # limit
 
-andi x5, x8, 1
+LOOP:
 
-beq x5, x0, EVEN
+beq x8, x5, DONE
 
-ODD:
-li x9, 0
-j END
+andi x6, x8, 1
 
-EVEN:
-li x9, 1
+bne x6, x0, SKIP
 
-END:
+add x9, x9, x8
+
+SKIP:
+
+addi x8, x8, 1
+
+j LOOP
+
+DONE:
 nop
